@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+{% block title %}Crear nuevo rol | {{ parent() }}{% endblock %}
+
+{% block body %}
+<ul>
+    {% for track in tracks %}
+        <li>
+            {{ track.song }} - {{ track.artist }}
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
