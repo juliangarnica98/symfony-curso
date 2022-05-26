@@ -11,7 +11,8 @@ class CursoController
     #[Route('/')]
     public function homepage(): Response
     {
-        return new Response('Title : Curse');
+        return $this->render('');
+        //return new Response('Title : Curse');
     }
 
     #[Route('/rol/{slug}')]
