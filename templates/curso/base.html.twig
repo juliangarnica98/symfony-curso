@@ -4,7 +4,7 @@
 
 
 {% block body %}
-
+    <div {{ stimulus_controller('hello') }}></div>
 <ul>
     {% for track in tracks %}
         <li>
