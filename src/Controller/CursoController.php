@@ -9,7 +9,7 @@ use function Symfony\Component\String\u;
 
 class CursoController extends AbstractController
 {
-    #[Route('/')]
+    #[Route('/',name: 'app_home')]
     public function homepage()
     {
         $tracks = [
@@ -20,7 +20,7 @@ class CursoController extends AbstractController
             ['song' => 'On Bended Knee', 'artist' => 'Boyz II Men'],
             ['song' => 'Fantasy', 'artist' => 'Mariah Carey'],
         ];
-
+        //dump($tracks);
         return $this->render('curso/base.html.twig', [
             'title' => 'PB & Jams',
             'tracks' => $tracks,
@@ -28,7 +28,7 @@ class CursoController extends AbstractController
         //return new Response('Title : Curse');
     }
 
-    #[Route('/rol/{slug}')]
+    #[Route('/rol/{slug}', name: 'app_rol')]
     public function rol(String $slug = null): Response
     {
         if($slug){
